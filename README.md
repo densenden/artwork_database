@@ -1,65 +1,65 @@
 # Artwork Database
 
-Dieses Projekt verwaltet KI-generierte Kunstwerke für die automatisierte Erstellung von Print-on-Demand-Produkten.
+This project manages AI-generated artworks for the automated creation of print-on-demand products.
 
-## Voraussetzungen
+## Prerequisites
 
-- Python 3.8 oder höher
-- Virtuelle Umgebung (empfohlen)
-- Abhängigkeiten in `requirements.txt` (siehe unten)
-- AWS-Zugangsdaten für S3-Integration
+- Python 3.8 or higher
+- Virtual environment (recommended)
+- Dependencies in `requirements.txt` (see below)
+- AWS credentials for S3 integration
 
 ## Installation
 
-1. **Repository klonen**:
+1. **Clone the repository**:
    ```bash
    git clone <repository-url>
    cd artwork_database
    ```
 
-2. **Virtuelle Umgebung erstellen und aktivieren**:
+2. **Create and activate a virtual environment**:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # Für Linux/Mac
-   venv\Scripts\activate     # Für Windows
+   source venv/bin/activate  # For Linux/Mac
+   venv\Scripts\activate     # For Windows
    ```
 
-3. **Abhängigkeiten installieren**:
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Umgebungsvariablen konfigurieren**:
-   Erstellen Sie eine `.env`-Datei im Projektverzeichnis und fügen Sie die folgenden Variablen hinzu:
+4. **Configure environment variables**:
+   Create a `.env` file in the project directory and add the following variables:
    ```
    DATABASE_URI=sqlite:///artwork.db
-   AWS_ACCESS_KEY_ID=<Ihr AWS Access Key>
-   AWS_SECRET_ACCESS_KEY=<Ihr AWS Secret Key>
+   AWS_ACCESS_KEY_ID=<Your AWS Access Key>
+   AWS_SECRET_ACCESS_KEY=<Your AWS Secret Key>
    AWS_REGION=us-east-1
-   S3_BUCKET_NAME=<Ihr S3-Bucket-Name>
+   S3_BUCKET_NAME=<Your S3 Bucket Name>
    ```
 
-## Nutzung
+## Usage
 
-1. **Datenbank initialisieren**:
-   Die Datenbank wird automatisch erstellt, wenn die App gestartet wird.
+1. **Initialize the database**:
+   The database is automatically created when the app is started.
 
-2. **App starten**:
+2. **Start the app**:
    ```bash
    python app.py
    ```
 
-3. **API-Endpunkte**:
-   Die API ist unter `/api` verfügbar. Weitere Details finden Sie in der Datei `routes/image_routes.py`.
+3. **API Endpoints**:
+   The API is available at `/api`. Further details can be found in the file `routes/image_routes.py`.
 
-## S3-Integration
+## S3 Integration
 
-Die App verwendet AWS S3, um Dateien zu speichern. Stellen Sie sicher, dass Ihre AWS-Zugangsdaten korrekt sind und der S3-Bucket existiert.
+The app uses AWS S3 to store files. Ensure that your AWS credentials are correct and the S3 bucket exists.
 
-## Demo-Daten
+## Demo Data
 
-Beim ersten Start der App werden automatisch Demo-Daten in die Datenbank eingefügt.
+When the app is started for the first time, demo data is automatically inserted into the database.
 
-## Lizenz
+## License
 
-Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen finden Sie in der Datei `LICENSE`.
+This project is licensed under the MIT License. For more information, see the file `LICENSE`.
